@@ -5,7 +5,7 @@ export default class App {
     #currentProject;
     constructor(projects = [new Project("Default")]) {
         this.#projects = projects;
-        this.#currentProject = projects[0].id;
+        this.#currentProject = projects.length ? projects[0].id : null;
     }
 
     get projects() {
