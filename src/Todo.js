@@ -1,5 +1,5 @@
 
-class Todo {
+export default class Todo {
     #title;
     #description;
     #dueDate;
