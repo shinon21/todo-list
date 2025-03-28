@@ -22,12 +22,8 @@ export default class Project {
         return this.#id;
     }
 
-    addTodo(todo) {
-        this.#todos.push(new Todo(
-            todo.title,
-            todo.description,
-            todo.dueDate,
-            todo.priority));
+    addTodo(title, description, dueDate, priority) {
+        this.#todos.push(new Todo(title, description, dueDate, priority));
     }
 
     removeTodo(id) {
