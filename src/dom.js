@@ -14,11 +14,13 @@ const projectsContainer = document.querySelector(".projects");
 const mainContainer = document.querySelector("main");
 
 const createProjectButton = (project) => {
+    const li = createElement("li", [], { class: "project", class: project.id })
     const button = createElement(
         "button",
         [project.title],
-        { class: "project", id: project.id });
-    return button;
+        { class: project.id });
+    li.append(button);
+    return li;
 }
 
 export const appendProjects = (projects) => {
